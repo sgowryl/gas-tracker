@@ -16,40 +16,40 @@
 
 <div class="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
 	<div class="relative z-30 w-auto min-w-full min-h-full max-w-none">
-		<div class="my-40 mx-40">
+		<div class="my-40 mx-2 md:mx-40">
 			{#await fetchGasPrice}
 				<p>...waiting</p>
 			{:then data}
 				<div
-					class="text-center text-5xl py-10 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-red-500 font-semibold"
+					class="my-5 text-center text-5xl py-2 md:py-10 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-red-500 font-semibold"
 				>
 					🔥 Gas price
 				</div>
-				<div class="grid grid-cols-3 text-xl text-gray-300 gap-5">
+				<div class="grid md:grid-cols-3 text-xl text-gray-300 gap-5">
 					<div
-						class="border rounded-lg border-zinc-800 text-center py-10 bg-zinc-900 bg-opacity-40 hover:bg-opacity-80 ease-in duration-200"
+						class="border rounded-lg border-zinc-800 text-center py-2 md:py-10 bg-zinc-900 bg-opacity-40 hover:bg-opacity-80 ease-in duration-200"
 					>
-						<div class="text-5xl">🐢</div>
-						<div class="text-lg text-gray-500 py-3 ">standard</div>
-						<div class="text-5xl font-semibold text-gray-200">
+						<div class="text-xl md:text-5xl">🐢</div>
+						<div class="md:text-lg text-gray-500 py-3 ">standard</div>
+						<div class="text-xl md:text-5xl font-semibold text-gray-200">
 							{data.standard.baseFeePerGas}
 						</div>
 					</div>
 					<div
-						class="border rounded-lg border-zinc-800 text-center py-10 bg-zinc-900 bg-opacity-40 hover:bg-opacity-80 ease-in duration-200"
+						class="border rounded-lg border-zinc-800 text-center py-2 md:py-10 bg-zinc-900 bg-opacity-40 hover:bg-opacity-80 ease-in duration-200"
 					>
-						<div class="text-5xl">🐇</div>
-						<div class="text-lg text-gray-500 py-3">fast</div>
-						<div class="text-5xl font-semibold text-gray-200">
+						<div class="text-xl md:text-5xl">🐇</div>
+						<div class="md:text-lg text-gray-500 py-3">fast</div>
+						<div class="text-xl md:text-5xl font-semibold text-gray-200">
 							{data.fast.baseFeePerGas}
 						</div>
 					</div>
 					<div
-						class="border rounded-lg border-zinc-800 text-center py-10 bg-zinc-900 bg-opacity-40 hover:bg-opacity-80 ease-in duration-200"
+						class="border rounded-lg border-zinc-800 text-center py-2 md:py-10 bg-zinc-900 bg-opacity-40 hover:bg-opacity-80 ease-in duration-200"
 					>
-						<div class="text-5xl">🐆</div>
-						<div class="text-lg text-gray-500 py-3">instant</div>
-						<div class="text-5xl font-semibold text-gray-200">
+						<div class="text-xl md:text-5xl">🐆</div>
+						<div class="md:text-lg text-gray-500 py-3">instant</div>
+						<div class="text-xl md:text-5xl font-semibold text-gray-200">
 							{data.instant.baseFeePerGas}
 						</div>
 					</div>
